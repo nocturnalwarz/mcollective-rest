@@ -22,3 +22,4 @@ action "get", :description => "Do a get on a url" do
     output  :response,
             :description => "response to get",
             :display_as  => "response"
+end
