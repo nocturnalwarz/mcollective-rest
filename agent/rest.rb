@@ -10,10 +10,12 @@ module MCollective
     			url: request[:url],
     			method: :get
     		}
-
-    		response = RestClient::Request.execute(options)
-
-    		reply[:response] = response.body
+    		begin
+    			response = RestClient::Request.execute(options)
+    			reply[:response] = response.body
+    		rescue => e
+    			reply[:error] = e
+    		end
     	end
     end
   end

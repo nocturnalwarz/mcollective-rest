@@ -22,4 +22,8 @@ action "get", :description => "Do a get on a url" do
     output  :response,
             :description => "response to get",
             :display_as  => "response"
+
+    output :error,
+           :description => "error set by rest"
+           :display_as  => "error"
 end
